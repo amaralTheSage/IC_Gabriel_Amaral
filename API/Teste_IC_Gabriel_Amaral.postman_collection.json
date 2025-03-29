@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "a1e11749-0c6b-4104-be2e-f896c2e1bac1",
+		"name": "Teste_IC_Gabriel_Amaral",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "43571906"
+	},
+	"item": [
+		{
+			"name": "Busca Todas Operadoras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000"
+			},
+			"response": []
+		},
+		{
+			"name": "Busca Paginada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/?page=42",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "42"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca por registros com \"Porto Alegre\"",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/?query=Porto Alegre&page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "Porto Alegre"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
