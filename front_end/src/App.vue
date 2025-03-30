@@ -14,6 +14,8 @@ function updatePage(dir) {
     page.value -= 1;
   } else if (dir === "prox") {
     page.value += 1;
+  } else if (dir === "reset") {
+    page.value = 1;
   }
 }
 
@@ -47,7 +49,7 @@ watch(
 
 <template>
   <main class="w-[85vw] m-auto my-10">
-    <Search @update:query="(q) => (query = q)" />
+    <Search @update:query="(q) => (query = q)" @update:page="updatePage" />
     <TableComponent :data="data" />
     <Pagination @update:page="updatePage" :page="page" :data="data" />
   </main>

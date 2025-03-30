@@ -2,7 +2,7 @@
 import { ref } from "vue";
 
 const user_input = ref("");
-const emit = defineEmits(["update:query"]);
+const emit = defineEmits(["update:query", "update:page"]);
 </script>
 
 <template>
@@ -14,6 +14,7 @@ const emit = defineEmits(["update:query"]);
     @submit="
       (e) => {
         e.preventDefault();
+        emit('update:page', 'reset');
         emit('update:query', user_input);
       }
     "

@@ -5,9 +5,10 @@ fastapi
 mysql.connector
 pydantic
 typing
+uvicorn
 
 Para instalar as dependências:
-pip install fastapi mysql.connector pydantic typing
+pip install fastapi mysql.connector pydantic typing 'uvicorn[standard]'
 
 Para rodar a aplicação:
 uvicorn main:app --reload
